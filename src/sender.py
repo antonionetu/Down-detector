@@ -10,5 +10,5 @@ def send_message(recipient, message):
     }, json={
         "number": recipient,
         "body": message,
-        "whatsappId": 33
+        "whatsappId": os.getenv('WHATSAPP_API_ID')
     })
