@@ -11,4 +11,4 @@ def recipient_numbers() -> list:
 
 
 def create_error_message(project_url, path_like, endpoint, status) -> str:
-    return f"ERRO: {path_like} do projeto {project_url} apresentou um erro na rota {endpoint}. Ele retornou o status {status}!"
+    return f'ERRO: "{path_like}" do projeto {project_url} apresentou um erro na rota {endpoint}. Ele retornou o status {status}!'
