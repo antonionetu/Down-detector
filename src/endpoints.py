@@ -19,7 +19,7 @@ def get_all_errors(endpoints) -> list:
 
     for project in endpoints:
         for path in project.get('Paths'):
-            if path.get('Status') == 200:
+            if path.get('Status') != 200:
                 url = project.get('ProjectUrl')
                 path_like = path.get('PathAKA')
                 endpoint = path.get('Path')
