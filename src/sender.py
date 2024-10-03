@@ -1,7 +1,8 @@
-import requests, json, os
+import os, requests
 from dotenv import load_dotenv
 
 load_dotenv()
+
 
 def send_message(recipient, message):
     response = requests.post(os.getenv('WHATSAPP_API_URL'), headers={
@@ -12,3 +13,4 @@ def send_message(recipient, message):
         "body": message,
         "whatsappId": os.getenv('WHATSAPP_API_ID')
     })
+    print(response.json())

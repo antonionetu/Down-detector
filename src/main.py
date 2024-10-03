@@ -9,3 +9,5 @@ errors = get_all_errors(endpoints)
 for error in errors:
     for number in recipient_numbers():
         send_message(number, error)
+
+send_message("5579988766544", "teste")
